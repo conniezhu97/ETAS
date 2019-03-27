@@ -27,7 +27,7 @@ catalog <- function(data, time.begin=NULL, study.start=NULL,
   dt <- as.POSIXlt(paste(data$date, data$time), tz=tz)
   if (sum(duplicated(dt)) != 0)
     stop(paste("no more than one event can occur simultaneously!",
-               "check events")
+               "check events"))
   if (is.unsorted(dt))
   {
     warning(paste("events were not chronologically sorted:",
